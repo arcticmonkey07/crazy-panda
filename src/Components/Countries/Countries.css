@@ -1,0 +1,12 @@
+.table-head-item {
+  cursor: pointer;
+  transition: .3s all ease;
+}
+
+.table-head-item:hover {
+  background-color: rgb(226, 224, 224);
+}
+
+.table-head-item:active {
+  background-color: rgb(196, 196, 196);
+}
