@@ -24,13 +24,18 @@ function App() {
   const lastCountryIndex = currentPage * countriesPerPage;
   const firstCountryIndex = lastCountryIndex - countriesPerPage;
   const currentCountry = countries.slice(firstCountryIndex, lastCountryIndex);
+  const allPagesCount = countries.length / countriesPerPage;
 
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
-  }
+  };
 
-  const nextPage = () => setCurrentPage( prev => prev + 1);
-  const prevPage = () => setCurrentPage( prev => prev - 1);
+  const nextPage = () => {
+    return currentPage >= allPagesCount ? null : setCurrentPage(prev => prev + 1);
+  };
+  const prevPage = () => {
+    return currentPage <= 1 ? null : setCurrentPage(prev => prev - 1);
+  };
 
   return (
     <div className="container mt-5">

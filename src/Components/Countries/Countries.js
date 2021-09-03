@@ -39,7 +39,7 @@ const Countries = ({ countries, loading }) => {
           <label className="mb-1">Search:</label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             placeholder="Enter search..."
             onChange={(e) => { setValue(e.target.value); }}
           />

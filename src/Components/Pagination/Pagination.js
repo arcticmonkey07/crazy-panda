@@ -17,9 +17,9 @@ const Pagination = ({ countriesPerPage, totalCountries, paginate, currentPage })
 
             return (
               <li className='page-item' key={number}>
-                <a href="!#" className={`page-link ${activeClass}`} onClick={() => paginate(number)}>
+                <button className={`page-link ${activeClass}`} onClick={() => paginate(number)}>
                   {number}
-                </a>
+                </button>
               </li>
             );
           }
